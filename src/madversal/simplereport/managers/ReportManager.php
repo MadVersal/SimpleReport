@@ -106,7 +106,7 @@ class ReportManager {
             return false;
         }
         
-        $cooldown = $this->plugin->getConfig()->get("report-cooldown", 60);
+        $cooldown = $this->plugin->getConfig()->get("report-cooldown");
         $timeSinceLastReport = time() - $this->lastReportTime[$playerName];
         
         return $timeSinceLastReport < $cooldown;
