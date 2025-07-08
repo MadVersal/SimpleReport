@@ -1,5 +1,5 @@
 # Message format for admin notifications when a report is submited
-admin-notification-format: "§c[REPORT] §f{reporter} reported {reported} for: {reason}"
+admin-notification-format: "§c[REPORT] §7{reporter} reported {reported} for: {reason}"
 
 # Cooldown between reports (in seconds) to prevent spam
 report-cooldown: 60
@@ -11,11 +11,14 @@ min-reason-length: 5
 max-reason-length: 100
 
 # Number of reports to show per page in /viewreports
-reports-per-page: 10
+reports-per-page: 5
+
+# Setup the webhook
+report.webhook: 'Your webhook here'
 
 # Auto-cleanup settings
 cleanup:
-  # Enable automatic cleanup of old resolved reports
+  # Enable automatic cleanup of old resolved reports if the reports not set resolved cant remove it
   enabled: true
   # Delete resolved reports older than X days
   days-old: 30
@@ -30,5 +33,3 @@ features:
   console-logging: true
   # Broadcast to all admins when a report is made
   broadcast-to-admins: true
-  # Webhook
-  report.webhook: "Your webhook here"
