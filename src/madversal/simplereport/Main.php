@@ -56,8 +56,9 @@ class Main extends PluginBase {
                 $player->sendMessage($message);
 
      /**
-      * Prox function webhook submit
+      * Function webhook submit
       */
+                $webHook = new Webhook(Main::getInstance()->getConfig()->get('report.webhook'));
                 
             }
         }
