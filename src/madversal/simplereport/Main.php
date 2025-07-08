@@ -58,7 +58,7 @@ class Main extends PluginBase {
      /**
       * Function webhook submit
       */
-                $webHook = new Webhook($this->getConfig()->get('report.webhook'));
+                $webHook = new Webhook($this->getConfig()->get('report-webhook'));
                 $msg = new Message();
                 $embed = new Embed();
                 $embed->setTitle("New Report");                    
