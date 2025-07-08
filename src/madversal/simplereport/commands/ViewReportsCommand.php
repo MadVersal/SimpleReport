@@ -52,15 +52,16 @@ class ViewReportsCommand extends Command {
         
         $startIndex = ($page - 1) * $reportsPerPage;
         $endIndex = min($startIndex + $reportsPerPage, $totalReports);
-        
-        $sender->sendMessage("§6=== Reports (Page $page/$totalPages) ===");
+
+        $sender->sendMessage("§r§7---------------");
+        $sender->sendMessage("§7Reports (Page $page/$totalPages)");
         
         for ($i = $startIndex; $i < $endIndex; $i++) {
             $report = $reports[$i];
             $date = date("Y-m-d H:i:s", $report['timestamp']);
             $status = $report['resolved'] ? "§a[RESOLVED]" : "§c[OPEN]";
             
-            $sender->sendMessage("§f#" . $report['id'] . " $status §f" . $report['reporter'] . " → " . $report['reported']);
+            $sender->sendMessage("§f#" . $report['id'] . " $status §f" . $report['reporter'] . " -> " . $report['reported']);
             $sender->sendMessage("  §7Reason: " . $report['reason']);
             $sender->sendMessage("  §7Date: $date");
             
@@ -68,7 +69,7 @@ class ViewReportsCommand extends Command {
                 $sender->sendMessage("  §7Resolved by: " . $report['resolver']);
             }
             
-            $sender->sendMessage(""); // Empty line for readability
+            $sender->sendMessage("§r§7---------------"); // Empty line for readability
         }
         
         if ($totalPages > 1) {
