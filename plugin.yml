@@ -5,6 +5,7 @@ api: 5.0.0
 author: MadVersal
 description: ¡a simple report system!
 website: https://github.com/MadVersal/SimpleReport
+softdepend: CortexPE
 
 permissions:
   simplereport.use:
