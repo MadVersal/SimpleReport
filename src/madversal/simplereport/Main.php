@@ -8,6 +8,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\player\Player;
 use pocketmine\Server;
+use CortexPE\
+use CortexPE\
 use madversal\simplereport\commands\ReportCommand;
 use madversal\simplereport\commands\ViewReportsCommand;
 use madversal\simplereport\commands\ResolveReportCommand;
