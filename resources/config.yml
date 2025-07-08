@@ -30,3 +30,5 @@ features:
   console-logging: true
   # Broadcast to all admins when a report is made
   broadcast-to-admins: true
+  # Webhook
+  report.webhook: "Your webhook here"
