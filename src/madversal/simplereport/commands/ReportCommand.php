@@ -59,14 +59,14 @@ class ReportCommand extends Command {
         
         // Check for spam protection
         if ($this->plugin->getReportManager()->isSpamming($sender->getName())) {
-            $cooldown = $this->plugin->getConfig()->get("report-cooldown", 60);
+            $cooldown = $this->plugin->getConfig()->get("report-cooldown");
             $sender->sendMessage("§cYou must wait $cooldown seconds between reports!");
             return false;
         }
         
         // Validate reason length
-        $minLength = $this->plugin->getConfig()->get("min-reason-length", 5);
-        $maxLength = $this->plugin->getConfig()->get("max-reason-length", 100);
+        $minLength = $this->plugin->getConfig()->get("min-reason-length");
+        $maxLength = $this->plugin->getConfig()->get("max-reason-length");
         
         if (strlen($reason) < $minLength) {
             $sender->sendMessage("§cReason must be at least $minLength characters long!");
