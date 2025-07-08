@@ -1,0 +1,33 @@
+name: SimpleReport
+version: "0.0.1-BETA"
+main: madversal\simplereport\Main
+api: 5.0.0
+author: MadVersal
+description: ¡a simple report system!
+website: https://github.com/MadVersal/SimpleReport
+
+permissions:
+  simplereport.use:
+    description: Allows players to use the report command
+    default: true
+  simplereport.admin:
+    description: Allows admins to view reports and receive notifications
+    default: op
+  simplereport.viewreports:
+    description: Allows viewing all reports
+    default: op
+
+commands:
+  report:
+    description: Report a player
+    usage: /report <player> <reason>
+    permission: simplereport.use
+  viewreports:
+    description: View all reports
+    usage: /viewreports [page]
+    permission: simplereport.viewreports
+    aliases: [reports]
+  resolvereport:
+    description: Mark a report as resolved
+    usage: /resolvereport <id>
+    permission: simplereport.admin
