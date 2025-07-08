@@ -8,8 +8,9 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\player\Player;
 use pocketmine\Server;
-use CortexPE\
-use CortexPE\
+use CortexPE\DiscordWebhookAPI\Embed;
+use CortexPE\DiscordWebhookAPI\Message;
+use CortexPE\DiscordWebhookAPI\Webhook;
 use madversal\simplereport\commands\ReportCommand;
 use madversal\simplereport\commands\ViewReportsCommand;
 use madversal\simplereport\commands\ResolveReportCommand;
@@ -53,7 +54,11 @@ class Main extends PluginBase {
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             if ($player->hasPermission("simplereport.admin")) {
                 $player->sendMessage($message);
-                // Here ( down ) register the webhook
+
+     /**
+      * Prox function webhook submit
+      */
+                
             }
         }
         
