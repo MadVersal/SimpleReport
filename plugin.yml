@@ -1,5 +1,5 @@
 name: SimpleReport
-version: "0.0.2-BETA"
+version: "1.0.0"
 main: madversal\simplereport\Main
 api: 5.0.0
 author: MadVersal
