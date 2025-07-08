@@ -1,5 +1,5 @@
 name: SimpleReport
-version: "0.0.1-BETA"
+version: "0.0.2-BETA"
 main: madversal\simplereport\Main
 api: 5.0.0
 author: MadVersal
@@ -17,18 +17,3 @@ permissions:
   simplereport.viewreports:
     description: Allows viewing all reports
     default: op
-
-commands:
-  report:
-    description: Report a player
-    usage: /report <player> <reason>
-    permission: simplereport.use
-  viewreports:
-    description: View all reports
-    usage: /viewreports [page]
-    permission: simplereport.viewreports
-    aliases: [reports]
-  resolvereport:
-    description: Mark a report as resolved
-    usage: /resolvereport <id>
-    permission: simplereport.admin
