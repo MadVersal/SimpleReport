@@ -48,7 +48,7 @@ class Main extends PluginBase {
      * Notify all online admins about a new report
      */
     public function notifyAdmins(string $reporter, string $reported, string $reason): void {
-        $message = $this->getConfig()->get("admin-notification-format", "§c[REPORT] §7{reporter} reported {reported} for: {reason}");
+        $message = $this->getConfig()->get("admin-notification-format");
         $message = str_replace(["{reporter}", "{reported}", "{reason}"], [$reporter, $reported, $reason], $message);
         
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
