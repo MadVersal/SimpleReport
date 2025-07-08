@@ -59,16 +59,16 @@ class Main extends PluginBase {
       * Function webhook submit
       */
                 $webHook = new Webhook($this->getConfig()->get('report.webhook'));
+                $msg = new Message();
                 $embed = new Embed();
                 $embed->setTitle("New Report");                    
-                $embed->addField("👤 User: {reported}");
-                $embed->addField("📝 Reason: {reason}");
-                $embed->addField("⚠️ Reported By: {reporter}");
-                $embed->setColor(00000);
-                $embed->setFooter("");
+                $embed->addField("👤 User:", "$reported");
+                $embed->addField("📝 Reason:", "$reason");
+                $embed->addField("⚠️ Reported By:", "$reporter");
+                $embed->setColor(0xFF0000);
+                $embed->setFooter("test");
                 $msg->addEmbed($embed);
-
-                    $webHook->send($msg);
+                $webHook->send($msg);                    
             }
         }
         
