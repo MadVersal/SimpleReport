@@ -51,6 +51,7 @@ class Main extends PluginBase {
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             if ($player->hasPermission("simplereport.admin")) {
                 $player->sendMessage($message);
+                // Here ( down ) register the webhook
             }
         }
         
