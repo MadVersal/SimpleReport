@@ -65,8 +65,8 @@ class Main extends PluginBase {
                 $embed->addField("👤 User:", "$reported");
                 $embed->addField("📝 Reason:", "$reason");
                 $embed->addField("⚠️ Reported By:", "$reporter");
-                $embed->setColor(mt_rand(0x000000, 0xFFFFFF));
-                $embed->setFooter("test");
+                $embed->setColor(mt_rand(0x000000, 0xFFFFFF)); // This add the random color
+                $embed->setFooter("¡New report has been submited!");
                 $msg->addEmbed($embed);
                 $webHook->send($msg);                    
             }
