@@ -52,7 +52,7 @@ class ResolveReportCommand extends Command {
             $sender->sendMessage("§aReport #$reportId has been marked as resolved!");
             
             // Notify other admins
-            $message = "§a[REPORT RESOLVED] §f" . $sender->getName() . " resolved report #$reportId (" . $report['reporter'] . " → " . $report['reported'] . ")";
+            $message = "§a[REPORT RESOLVED] §f" . $sender->getName() . " resolved report #$reportId (" . $report['reporter'] . " -> " . $report['reported'] . ")";
             foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
                 if ($player->hasPermission("simplereport.admin") && $player !== $sender) {
                     $player->sendMessage($message);
