@@ -1,4 +1,4 @@
-# Message format for admin notifications when a report is submited
+# Message format for admin notifications when a report is submited, Variables: {reporter} get the reporter, {reported} get the user reported, {reason} get the reason of report.
 admin-notification-format: "§c[REPORT] §7{reporter} reported {reported} for: {reason}"
 
 # Cooldown between reports (in seconds) to prevent spam
@@ -14,7 +14,7 @@ max-reason-length: 100
 reports-per-page: 5
 
 # Setup the webhook
-report.webhook: 'Your webhook here'
+report-webhook: 'Your webhook here'
 
 # Auto-cleanup settings
 cleanup:
