@@ -29,7 +29,7 @@ class ViewReportsCommand extends Command {
             $page = max(1, (int)$args[0]);
         }
         
-        $reportsPerPage = $this->plugin->getConfig()->get("reports-per-page", 10);
+        $reportsPerPage = $this->plugin->getConfig()->get("reports-per-page");
         $reports = $this->plugin->getReportManager()->getAllReports();
         
         if (empty($reports)) {
@@ -53,7 +53,7 @@ class ViewReportsCommand extends Command {
         $startIndex = ($page - 1) * $reportsPerPage;
         $endIndex = min($startIndex + $reportsPerPage, $totalReports);
 
-        $sender->sendMessage("§r§7---------------");
+        $sender->sendMessage("§r§7------------------------------");
         $sender->sendMessage("§7Reports (Page $page/$totalPages)");
         
         for ($i = $startIndex; $i < $endIndex; $i++) {
@@ -69,7 +69,7 @@ class ViewReportsCommand extends Command {
                 $sender->sendMessage("  §7Resolved by: " . $report['resolver']);
             }
             
-            $sender->sendMessage("§r§7---------------"); // Empty line for readability
+            $sender->sendMessage("§r§7------------------------------"); // Empty line for readability
         }
         
         if ($totalPages > 1) {
