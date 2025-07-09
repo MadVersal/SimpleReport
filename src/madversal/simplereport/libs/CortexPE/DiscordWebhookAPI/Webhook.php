@@ -54,13 +54,13 @@ declare(strict_types = 1);
 
 
 
-namespace libs\CortexPE\DiscordWebhookAPI;
+namespace madversal\simplereport\libs\CortexPE\DiscordWebhookAPI;
 
 
 
 
 
-use libs\CortexPE\DiscordWebhookAPI\task\DiscordWebhookSendTask;
+use madversal\simplereport\libs\CortexPE\DiscordWebhookAPI\task\DiscordWebhookSendTask;
 
 use pocketmine\Server;
 
