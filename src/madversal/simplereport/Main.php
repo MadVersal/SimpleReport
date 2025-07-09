@@ -76,3 +76,4 @@ class Main extends PluginBase {
         $this->getLogger()->info("Report: $reporter reported $reported for: $reason");
     }
 }
+//CHECK IF AS ERROR
