@@ -26,7 +26,7 @@
 
 declare(strict_types = 1);
 
-namespace libs\CortexPE\DiscordWebhookAPI;
+namespace madversal\simplereport\libs\CortexPE\DiscordWebhookAPI;
 
 class Message implements \JsonSerializable {
     /** @var array */
