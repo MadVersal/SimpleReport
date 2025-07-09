@@ -26,7 +26,7 @@
 
 declare(strict_types = 1);
 
-namespace libs\CortexPE\DiscordWebhookAPI\task;
+namespace madversal\simplereport\libs\CortexPE\DiscordWebhookAPI\task;
 
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
