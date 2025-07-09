@@ -19,7 +19,7 @@ use madversal\simplereport\managers\ReportManager;
 class Main extends PluginBase {
     
     private ReportManager $reportManager;
-    private Config $config;
+    //private Config $config;
     
     public function onEnable(): void {
         // Create data folder if it doesn't exist
