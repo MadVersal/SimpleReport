@@ -54,7 +54,7 @@ declare(strict_types = 1);
 
 
 
-namespace libs\CortexPE\DiscordWebhookAPI;
+namespace madversal\simplereport\libs\CortexPE\DiscordWebhookAPI;
 
 
 
