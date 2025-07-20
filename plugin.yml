@@ -3,7 +3,7 @@ version: "1.0.0"
 main: madversal\simplereport\Main
 api: 5.0.0
 author: MadVersal
-description: ¡a simple report system!
+description: ¡a simple report system ready for use!
 website: https://github.com/MadVersal/SimpleReport
 softdepend: CortexPE
 
