@@ -55,7 +55,8 @@ final class ReportCommand extends Command implements PluginOwned {
             return false;
         }
 
-        if ($plugin->getReportManager()->isSpamming($sender->getName())) {
+        $reportManager = $plugin->getReportManager(); //bruh?
+        if ($reportManager->isSpamming($sender->getName())) {
             $cooldown = $plugin->getConfig()->get("report-cooldown");
             $sender->sendMessage("§cYou must wait $cooldown seconds between reports!");
             return false;
