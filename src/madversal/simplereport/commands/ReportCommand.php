@@ -12,7 +12,7 @@ use pocketmine\plugin\PluginOwned;
 use pocketmine\plugin\PluginOwnedTrait;
 use madversal\simplereport\Main;
 
-final class ReportCommand extends Command {
+final class ReportCommand extends Command implements PluginOwned {
     use PluginOwnedTrait;
     
     //private Main $plugin;
