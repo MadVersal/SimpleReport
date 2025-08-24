@@ -9,11 +9,12 @@ use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\plugin\PluginOwnedTrait;
+use madversal\simplereport\Main;
 
 final class ReportCommand extends Command implements PluginOwned {
     use PluginOwnedTrait;
 
-    public function __construct(\madversal\simplereport\Main $plugin) {
+    public function __construct(Main $plugin) {
         parent::__construct("report", "Report a player", "/report <player> <reason>");
         $this->owningPlugin = $plugin;
         $this->setPermission("simplereport.use");
