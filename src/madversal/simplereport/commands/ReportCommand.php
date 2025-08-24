@@ -25,6 +25,7 @@ final class ReportCommand extends Command implements PluginOwned {
     }
     
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
+        $plugin = $this->getOwningPlugin();
         if (!$sender instanceof Player) {
             $sender->sendMessage("§cThis command can only be used by players!");
             return false;
