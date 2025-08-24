@@ -44,7 +44,7 @@ final class ReportCommand extends Command implements PluginOwned {
         $reason = implode(" ", $args);
         
         // Check if target player exists or has played before
-        $targetPlayer = $this->plugin->getServer()->getPlayerExact($targetName);
+        $targetPlayer = $this->getOwningPlugin->getServer()->getPlayerExact($targetName);
         if ($targetPlayer === null) {
             // Check if player has played before by looking for player data
             $playerDataPath = $this->plugin->getServer()->getDataPath() . "players/" . strtolower($targetName) . ".dat";
