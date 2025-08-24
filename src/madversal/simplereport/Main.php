@@ -33,12 +33,12 @@ class Main extends PluginBase {
         $this->getServer()->getCommandMap()->register("simplereport", new ViewReportsCommand($this));
         $this->getServer()->getCommandMap()->register("simplereport", new ResolveReportCommand($this));
         
-        $this->getLogger()->info("SimpleReport has been enabled successfully!");
+        //$this->getLogger()->info("SimpleReport has been enabled successfully!"); poggit remove?
     }
     
-    public function onDisable(): void {
+    /*public function onDisable(): void {
         $this->getLogger()->info("SimpleReport has been disabled!");
-    }
+    }the same*/
     
     public function getReportManager(): ReportManager {
         return $this->reportManager;
