@@ -16,7 +16,7 @@ final class ReportCommand extends Command implements PluginOwned {
 
     public function __construct(Main $plugin) {
         parent::__construct("report", "Report a player", "/report <player> <reason>");
-        $this->owningPlugin = $plugin;
+        $this->owningPlugin(); = $plugin;
         $this->setPermission("simplereport.use");
     }
 
